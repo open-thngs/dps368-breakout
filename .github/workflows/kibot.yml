@@ -29,12 +29,12 @@ jobs:
 
     - name: Run ERC
       run: |
-        make -C pcb_prog erc
+        make -C pcb erc
     - name: Retrieve results
       uses: actions/upload-artifact@v3
       with:
         name: ERC_Output
-        path: pcb_prog/Fabrication
+        path: pcb/Fabrication
 
   DRC:
     runs-on: ubuntu-latest
@@ -46,12 +46,12 @@ jobs:
 
     - name: Run DRC
       run: |
-        make -C pcb_prog drc
+        make -C pcb drc
     - name: Retrieve results
       uses: actions/upload-artifact@v3
       with:
         name: DRC_Output
-        path: pcb_prog/Fabrication
+        path: pcb/Fabrication
 
   FabSch:
     name: Schematic fabrication files
@@ -64,15 +64,15 @@ jobs:
 
     - name: Run schematic stuff
       run: |
-        make -C pcb_prog sch_fab
+        make -C pcb sch_fab
     - name: Retrieve results
       if: ${{ always() }}
       uses: actions/upload-artifact@v3
       with:
         name: FabSch_Output
         path: |
-          pcb_prog/Fabrication/
-          pcb_prog/kibot_error.log
+          pcb/Fabrication/
+          pcb/kibot_error.log
         if-no-files-found: warn
 
   FabPCB:
@@ -86,13 +86,13 @@ jobs:
 
     - name: Run PCB stuff
       run: |
-        make -C pcb_prog pcb_fab
+        make -C pcb pcb_fab
     - name: Retrieve results
       if: ${{ always() }}
       uses: actions/upload-artifact@v3
       with:
         name: FabPCB_Output
         path: |
-          pcb_prog/Fabrication/
-          pcb_prog/kibot_error.log
+          pcb/Fabrication/
+          pcb/kibot_error.log
         if-no-files-found: warn
