@@ -18,6 +18,11 @@ on:
       - 'pcb/Makefile'
       - '.github/workflows/kibot.yml'
 
+env:
+  schema: "pcb/*.kicad_sch"
+  board: "pcb/*.kicad_pcb"
+  dir: .
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   ERC:
