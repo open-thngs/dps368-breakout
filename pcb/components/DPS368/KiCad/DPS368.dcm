@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP DPS368
+D Infineon PRESSURE SENSOR 8-pin LGA, 2.0 x 2.5 x 1.1 mm3, min 1.7V,  max 3.6V
+K
+F https://www.infineon.com/dgdl/Infineon-DPS368-DataSheet-v01_01-EN.pdf?fileId=5546d46269e1c019016a0c45105d4b40
+$ENDCMP
+#
+#End Doc Library

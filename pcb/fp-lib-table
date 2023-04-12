@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "DPS368XTSA1")(type "KiCad")(uri "${KIPRJMOD}/components/DPS368XTSA1")(options "")(descr ""))
+)

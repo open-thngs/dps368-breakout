@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "DPS368XTSA1")(type "Legacy")(uri "${KIPRJMOD}/components/DPS368XTSA1/DPS368XTSA1.lib")(options "")(descr ""))
+)
