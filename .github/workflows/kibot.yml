@@ -130,3 +130,4 @@ jobs:
             ${{env.dir}}/img/**
             !${{env.dir}}/**/*.ogv
             !${{env.dir}}/**/*.log
+            
